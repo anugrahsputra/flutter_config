@@ -2,14 +2,14 @@ group 'com.byneapp.flutter_config'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.22'
+    ext.kotlin_version = '2.2.21'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.3.1'
+        classpath 'com.android.tools.build:gradle:8.13.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -26,14 +26,13 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.byneapp.flutter_config' 
-    compileSdk 34
+    compileSdkVersion 36
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdk 21
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion 24
     }
     lintOptions {
         disable 'InvalidPackage'
